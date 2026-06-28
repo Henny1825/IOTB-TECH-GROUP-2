@@ -8,9 +8,9 @@ searchInput.addEventListener('keydown', (e) => {
     }
 });
 
-function getInput() {
+async function getInput() {
     const query = searchInput.value;
-    fetchData(query);
+    await fetchData(query);
 }
  
 async function fetchData(query) {
