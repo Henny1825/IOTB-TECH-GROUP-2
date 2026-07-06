@@ -1,6 +1,6 @@
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
-let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+let myfavourites = JSON.parse(localStorage.getItem('favourites')) || [];
 
 searchBtn.addEventListener('click', getInput);
 searchInput.addEventListener('keydown', (e) => {
@@ -141,3 +141,7 @@ function showFavourites() {
     }
     document.body.appendChild(modalDiv);
 } 
+
+favouriteContainer.addEventListener('click', () => {
+    showFavourites();
+})
